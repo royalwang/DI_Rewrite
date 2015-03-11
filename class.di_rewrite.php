@@ -73,10 +73,10 @@ class DI_Rewrite {
 		return $this;
 	}
 	
-	public function add_rewrite_rule($pattern, $callback,$override = true) {
+	public function add_rewrite_rule($pattern, $callback,$overwrite = true) {
 		$pattern = trim($pattern);
 		
-		if ( !$override && isset($this->rewrite[$pattern]) ){
+		if ( !$overwrite && isset($this->rewrite[$pattern]) ){
 			return $this->reset_current();
 		}
 		
